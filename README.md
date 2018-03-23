@@ -37,9 +37,9 @@ vscode基于electron，拥有一个index.html的静态文件，我要做的就�
     "live2d.right": 20,  //  canvas距右侧位置
     "live2d.model": "hijiki",  //  模型名称  见参考中第二条 目前26个
     "live2d.headPos": 0.5,  // 重心
-    "live2d.scale": 2, // 缩放
-    "live2d.opacity": 0.7,  //  透明度
-    "live2d.hoverOpacity": 1   // hover透明度
+    "live2d.scale": 2, // 缩放(貌似无效..)
+    "live2d.opacity": 0.7,  //  透明度(貌似无效..)
+    "live2d.hoverOpacity": 1   // hover透明度(貌似无效..)
 ```
 
 ## 1.0.0
@@ -52,3 +52,7 @@ Initial release of ...
 * [我自己的模型Demo（配置项model）](https://github.com/summerscar/live2dDemo)
 * [bilibili看板娘](https://github.com/52cik/bilibili-haruna)
 * [live2d 3.0](https://github.com/xiazeyu/live2d-widget.js)
+
+## 预览
+
+![](./screenshot/test.gif)
