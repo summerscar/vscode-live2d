@@ -3,7 +3,8 @@
     "displayName": "live2d",
     "description": "",
     "version": "1.0.0",
-    "publisher": "shenyu",
+    "autor": "summerscar",
+    "publisher": "shenyu1996",
     "engines": {
         "vscode": "^1.21.0"
     },
@@ -14,7 +15,7 @@
         "*"
     ],
     "main": "./out/src/extension",
-    "icon": "./logo_s.png",
+    "icon": "logo_s.png",
     "contributes": {
         "commands": [
             {
