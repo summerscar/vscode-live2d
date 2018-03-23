@@ -1,8 +1,8 @@
 {
     "name": "live2d",
     "displayName": "live2d",
-    "description": "",
-    "version": "1.0.0",
+    "description": "vscode的live2d扩展",
+    "version": "1.0.1",
     "autor": "summerscar",
     "publisher": "shenyu1996",
     "engines": {
@@ -32,50 +32,50 @@
         "type": "object",
         "title": "live2d插件配置",
         "properties": {
-                "live2d.width": {
-                    "type": "number",
-                    "default": 200,
-                    "description": "canvas宽度"
-                },
-                "live2d.height": {
-                    "type": "number",
-                    "default": 220,
-                    "description": "canvas高度"
-                },
-                "live2d.bottom": {
-                    "default": 20,
-                    "description": "canvas距底部位置"
-                },
-                "live2d.right": {
-                    "default": 20,
-                    "description": "canvas距右侧位置"
-                },
-                "live2d.model": {
-                    "type": "string",
-                    "default": "hijiki",
-                    "description": "模型名称"
-                },
-                "live2d.headPos": {
-                    "type": "number",
-                    "default": 0.5,
-                    "description": "重心"
-                },
-                "live2d.scale": {
-                    "type": "number",
-                    "default": 2,
-                    "description": "缩放"
-                },
-                "live2d.opacity": {
-                    "type": "number",
-                    "default": 0.7,
-                    "description": "透明度"
-                },
-                "live2d.hoverOpacity": {
-                    "type": "number",
-                    "default": 1,
-                    "description": "hover透明度"
-                }
+            "live2d.width": {
+                "type": "number",
+                "default": 200,
+                "description": "canvas宽度"
+            },
+            "live2d.height": {
+                "type": "number",
+                "default": 220,
+                "description": "canvas高度"
+            },
+            "live2d.bottom": {
+                "default": 20,
+                "description": "canvas距底部位置"
+            },
+            "live2d.right": {
+                "default": 20,
+                "description": "canvas距右侧位置"
+            },
+            "live2d.model": {
+                "type": "string",
+                "default": "hijiki",
+                "description": "模型名称"
+            },
+            "live2d.headPos": {
+                "type": "number",
+                "default": 0.5,
+                "description": "重心"
+            },
+            "live2d.scale": {
+                "type": "number",
+                "default": 2,
+                "description": "缩放"
+            },
+            "live2d.opacity": {
+                "type": "number",
+                "default": 0.7,
+                "description": "透明度"
+            },
+            "live2d.hoverOpacity": {
+                "type": "number",
+                "default": 1,
+                "description": "hover透明度"
             }
+        }
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
@@ -88,5 +88,5 @@
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
     },
-    "repository": "git@github.com:summerscar/vscode-live2d.git"
+    "repository": "https://github.com/summerscar/vscode-live2d.git"
 }
