@@ -1,0 +1,40 @@
+{
+    "name": "live2d",
+    "displayName": "live2d",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "shenyu",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "live2d.install",
+                "title": "Live2dInstall"
+            },
+            {
+                "command": "live2d.uninstall",
+                "title": "Live2dUninstall"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
