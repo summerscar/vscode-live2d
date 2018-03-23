@@ -5,6 +5,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const vscode = require("vscode");
 var fs = require('fs');
 var path = require('path');
+const render = require('./htmltemp')
+
+var config =  vscode.workspace.getConfiguration('live2d');
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 function activate(context) {
@@ -19,6 +22,11 @@ function activate(context) {
         var msg2 = "";
         if (isInstall) {
             newFilePath = path.join(extensionPath, "./../../","html", "index.html");
+            try {
+                fs.writeFileSync(newFilePath, render(config));
+            } catch (err) {
+                vscode.window.showInformationMessage(err);
+            }
             msg1 = "Install Live2d  Error!";
             msg2 = "Install Live2d  Complete,Reset VsCode!";
         }

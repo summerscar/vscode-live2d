@@ -1,4 +1,16 @@
+const render = function (config) {
+	let width = config.width || 200
+	let height = config.height || 220
+	let bottom = config.bottom || 20
+	let right = config.right || 20
+	let model = config.model || 'hijiki'
+	let headPos = config.headPos || 0.5
+	let scale = config.scale || 2
+	let opacity = config.opacity || 0.7
+	let hoverOpacity = config.hoverOpacity || 1
 
+   	let html = 
+`
 <!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
 <!DOCTYPE html>
 <html>
@@ -48,17 +60,22 @@
 	<script>
 		let canvas = document.createElement('canvas')
 		canvas.id = 'live2dcanvas'
-		canvas.width = 200
-		canvas.height = 220
-		canvas.style.width = '200px'
-		canvas.style.height = '220px'
+		canvas.width = ${width}
+		canvas.height = ${height}
+		canvas.style.width = '${width}px'
+		canvas.style.height = '${height}px'
 		canvas.style.position = 'fixed'
-		canvas.style.bottom = '20px'
-		canvas.style.right = '20px'
+		canvas.style.bottom = '${bottom}px'
+		canvas.style.right = '${right}px'
 		canvas.style.zIndex = '999'
 		canvas.style.pointerEvents = 'none'
 		document.body.appendChild(canvas)
 
-		loadlive2d('live2dcanvas', 'http://summerscar.me/live2dDemo/assets/tororo/tororo.model.json', 0.5, 2, 0.7, 1);
+		loadlive2d('live2dcanvas', 'http://summerscar.me/live2dDemo/assets/${model}/${model}.model.json', ${headPos}, ${scale}, ${opacity}, ${hoverOpacity});
 	</script>
 </html>
+`
+return html
+}
+
+module.exports = render

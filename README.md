@@ -1,65 +1,54 @@
 # live2d README
 
-This is the README for your extension "live2d". After writing up a brief description, we recommend including the following sections.
+某人的一个无聊想法，然后一个无聊的下午 写了第一个vs扩展
 
-## Features
+实现参考： [video](https://marketplace.visualstudio.com/items?itemName=kangping.video)扩展，用背景来播放视频...这个也很无聊的
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## 原理
 
-For example if there is an image subfolder under your extension project workspace:
+vscode基于electron，拥有一个index.html的静态文件，我要做的就是重写这个index.html加入相应的script标签和js 就行了，然而这样会被检测出vscode出错，这个没办法了
 
-\!\[feature X\]\(images/feature-x.png\)
+## 安装
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+***输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件***
 
-## Requirements
+***输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件***
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+***输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件***
 
-## Extension Settings
+* 扩展里搜索live2d安装
+* ctrl+shift+p 输入live2dInstall （这时候入口index.html会被重写，然后重启vs才会就能正确加载）
+* 重启
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## 卸载
 
-For example:
+* ctrl+shift+p 输入live2dUninstall(这时会恢复入口文件，依然是重启生效)
+* 卸载插件
 
-This extension contributes the following settings:
+## 配置
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+文件 -> 首选项 -> 设置
 
-## Known Issues
+```json
+    // 未配置则为如下默认参数
+    "live2d.width": 200,  // canvas宽度
+    "live2d.height": 220 // canvas高度,
+    "live2d.bottom": 20, //  canvas距底部位置
+    "live2d.right": 20,  //  canvas距右侧位置
+    "live2d.model": "hijiki",  //  模型名称  见参考中第二条 目前26个
+    "live2d.headPos": 0.5,  // 重心
+    "live2d.scale": 2, // 缩放
+    "live2d.opacity": 0.7,  //  透明度
+    "live2d.hoverOpacity": 1   // hover透明度
+```
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
+## 1.0.0
 
 Initial release of ...
 
-### 1.0.1
+## 其他参考
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+* [hexo-live2d ](http://summerscar.me/2018/01/17/%E7%94%A8live2d%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%AA%E5%8D%A1%E5%93%87%E4%BC%8A%E7%9A%84%E6%8C%82%E4%BB%B6/)
+* [我自己的模型Demo（配置项model）](https://github.com/summerscar/live2dDemo)
+* [bilibili看板娘](https://github.com/52cik/bilibili-haruna)
+* [live2d 3.0](https://github.com/xiazeyu/live2d-widget.js)
