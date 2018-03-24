@@ -4,6 +4,11 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<style>
+			#live2dcanvas:hover {
+				opacity: 1!important;
+			}
+		</style>
 	</head>
 	<body class="monaco-shell vs-dark" aria-label="">
 		<script>
@@ -48,17 +53,21 @@
 	<script>
 		let canvas = document.createElement('canvas')
 		canvas.id = 'live2dcanvas'
-		canvas.width = 200
-		canvas.height = 220
-		canvas.style.width = '200px'
-		canvas.style.height = '220px'
+		canvas.width = 150
+		canvas.height = 180
+		canvas.style.width = '150px'
+		canvas.style.height = '180px'
 		canvas.style.position = 'fixed'
 		canvas.style.bottom = '20px'
 		canvas.style.right = '20px'
+		canvas.style.opacity = 0.5
+		canvas.style.transition = 'all 0.5s'
 		canvas.style.zIndex = '999'
-		canvas.style.pointerEvents = 'none'
+		if (!false) {
+			canvas.style.pointerEvents = 'none'
+		}
 		document.body.appendChild(canvas)
 
-		loadlive2d('live2dcanvas', 'http://summerscar.me/live2dDemo/assets/tororo/tororo.model.json', 0.5, 2, 0.7, 1);
+		loadlive2d('live2dcanvas', 'http://summerscar.me/live2dDemo/assets/makoto0/makoto0.model.json', 0.5, 2, 0.5, 1);
 	</script>
 </html>

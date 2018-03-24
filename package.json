@@ -2,11 +2,11 @@
     "name": "live2d",
     "displayName": "live2d",
     "description": "vscode的live2d扩展",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "autor": "summerscar",
     "publisher": "shenyu1996",
     "engines": {
-        "vscode": "^1.21.0"
+        "vscode": "^1.10.0"
     },
     "categories": [
         "Other"
@@ -26,54 +26,59 @@
                 "command": "live2d.uninstall",
                 "title": "Live2dUninstall"
             }
-        ]
-    },
-    "configuration": {
-        "type": "object",
-        "title": "live2d插件配置",
-        "properties": {
-            "live2d.width": {
-                "type": "number",
-                "default": 200,
-                "description": "canvas宽度"
-            },
-            "live2d.height": {
-                "type": "number",
-                "default": 220,
-                "description": "canvas高度"
-            },
-            "live2d.bottom": {
-                "default": 20,
-                "description": "canvas距底部位置"
-            },
-            "live2d.right": {
-                "default": 20,
-                "description": "canvas距右侧位置"
-            },
-            "live2d.model": {
-                "type": "string",
-                "default": "hijiki",
-                "description": "模型名称"
-            },
-            "live2d.headPos": {
-                "type": "number",
-                "default": 0.5,
-                "description": "重心"
-            },
-            "live2d.scale": {
-                "type": "number",
-                "default": 2,
-                "description": "缩放"
-            },
-            "live2d.opacity": {
-                "type": "number",
-                "default": 0.7,
-                "description": "透明度"
-            },
-            "live2d.hoverOpacity": {
-                "type": "number",
-                "default": 1,
-                "description": "hover透明度"
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "live2d插件配置",
+            "properties": {
+                "live2d.width": {
+                    "type": "number",
+                    "default": 200,
+                    "description": "canvas宽度"
+                },
+                "live2d.height": {
+                    "type": "number",
+                    "default": 220,
+                    "description": "canvas高度"
+                },
+                "live2d.bottom": {
+                    "default": 20,
+                    "description": "canvas距底部位置"
+                },
+                "live2d.right": {
+                    "default": 20,
+                    "description": "canvas距右侧位置"
+                },
+                "live2d.model": {
+                    "type": "string",
+                    "default": "hijiki",
+                    "description": "模型名称"
+                },
+                "live2d.headPos": {
+                    "type": "number",
+                    "default": 0.5,
+                    "description": "重心"
+                },
+                "live2d.scale": {
+                    "type": "number",
+                    "default": 2,
+                    "description": "缩放"
+                },
+                "live2d.opacity": {
+                    "type": "number",
+                    "default": 0.7,
+                    "description": "透明度"
+                },
+                "live2d.hoverOpacity": {
+                    "type": "number",
+                    "default": 1,
+                    "description": "hover透明度"
+                },
+                "live2d.canHover": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "是否开启hover效果"
+                }
             }
         }
     },

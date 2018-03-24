@@ -8,6 +8,7 @@ const render = function (config) {
 	let scale = config.scale || 2
 	let opacity = config.opacity || 0.7
 	let hoverOpacity = config.hoverOpacity || 1
+	let canHover = config.canHover
 
    	let html = 
 `
@@ -16,6 +17,11 @@ const render = function (config) {
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<style>
+			#live2dcanvas:hover {
+				opacity: ${hoverOpacity}!important;
+			}
+		</style>
 	</head>
 	<body class="monaco-shell vs-dark" aria-label="">
 		<script>
@@ -67,8 +73,12 @@ const render = function (config) {
 		canvas.style.position = 'fixed'
 		canvas.style.bottom = '${bottom}px'
 		canvas.style.right = '${right}px'
+		canvas.style.opacity = ${opacity}
+		canvas.style.transition = 'all 0.5s'
 		canvas.style.zIndex = '999'
-		canvas.style.pointerEvents = 'none'
+		if (!${canHover}) {
+			canvas.style.pointerEvents = 'none'
+		}
 		document.body.appendChild(canvas)
 
 		loadlive2d('live2dcanvas', 'http://summerscar.me/live2dDemo/assets/${model}/${model}.model.json', ${headPos}, ${scale}, ${opacity}, ${hoverOpacity});

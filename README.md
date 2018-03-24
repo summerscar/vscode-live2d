@@ -10,11 +10,11 @@ vscode基于electron，拥有一个index.html的静态文件，我要做的就�
 
 ## 安装
 
-***输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件***
+**输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件**
 
-***输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件***
+**输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件**
 
-***输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件***
+**输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件**
 
 * 扩展里搜索live2d安装
 * ctrl+shift+p 输入live2dInstall （这时候入口index.html会被重写，然后重启vs才会就能正确加载）
@@ -24,9 +24,11 @@ vscode基于electron，拥有一个index.html的静态文件，我要做的就�
 
 * ctrl+shift+p 输入live2dUninstall(这时会恢复入口文件，依然是重启生效)
 * 卸载插件
+* 若仍报错，将备份的index.html再放回去就行了
 
 ## 配置
 
+**修改配置后执行live2dInstall再重启**
 文件 -> 首选项 -> 设置
 
 ```json
@@ -38,8 +40,9 @@ vscode基于electron，拥有一个index.html的静态文件，我要做的就�
     "live2d.model": "hijiki",  //  模型名称  见参考中第二条 目前26个
     "live2d.headPos": 0.5,  // 重心
     "live2d.scale": 2, // 缩放(貌似无效..)
-    "live2d.opacity": 0.7,  //  透明度(貌似无效..)
-    "live2d.hoverOpacity": 1   // hover透明度(貌似无效..)
+    "live2d.opacity": 0.7, // 透明度
+    "live2d.hoverOpacity": 1 // hover透明度
+    "live2d.canHover": true // 是否开启hover效果(鼠标穿透)
 ```
 
 ## 1.0.0
