@@ -8,6 +8,11 @@
 
 vscode基于electron，拥有一个index.html的静态文件，我要做的就是重写这个index.html加入相应的script标签和js 就行了，然而这样会被检测出vscode出错，这个没办法了
 
+## 注意
+
+* windows系统下需要管理员权限 （右击图标-兼容性-以管理员运行）
+* mac系统下 在应用目录-vscode-查看简介-最下方修改-读与写权限
+
 ## 安装
 
 **输入live2dInstall前务必手动备份 Microsoft VS Code/resources/app/out/vs/workbench/electron-browser/bootstrap/index.html文件**
@@ -28,8 +33,9 @@ vscode基于electron，拥有一个index.html的静态文件，我要做的就�
 
 ## 配置
 
-**修改配置后执行live2dInstall再重启**
-文件 -> 首选项 -> 设置
+**修改配置后执行live2dInstall再重启才生效**
+
+配置： 文件 -> 首选项 -> 设置
 
 ```json
     // 未配置则为如下默认参数
