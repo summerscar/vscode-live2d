@@ -13,8 +13,8 @@ var config =  vscode.workspace.getConfiguration('live2d');
 function activate(context) {
     function writeFile(isInstall) {
         var base = path.dirname(require.main.filename);
-        var dir = path.join(base, 'vs', 'workbench', 'electron-browser', "bootstrap");
-        var indexPath = path.join(dir, "index.html");
+        var dir = path.join(base, 'vs', 'code', 'electron-browser', 'workbench');
+        var indexPath = path.join(dir, "workbench.html");
         // var extensionPath = vscode.extensions.getExtension("live2d").extensionPath;
         var extensionPath = __dirname
         var newFilePath = null;

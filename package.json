@@ -2,11 +2,11 @@
     "name": "live2d",
     "displayName": "live2d",
     "description": "vscode的live2d扩展",
-    "version": "1.0.4",
-    "autor": "summerscar",
+    "version": "1.1.1",
+    "author": "summerscar",
     "publisher": "shenyu1996",
     "engines": {
-        "vscode": "^1.10.0"
+        "vscode": "^1.28.0"
     },
     "categories": [
         "Other"

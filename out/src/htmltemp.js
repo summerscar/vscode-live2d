@@ -10,7 +10,7 @@ const render = function (config) {
 	let hoverOpacity = config.hoverOpacity || 1
 	let canHover = config.canHover
 
-   	let html = 
+   	let html =
 `
 <!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
 <!DOCTYPE html>
@@ -18,50 +18,16 @@ const render = function (config) {
 	<head>
 		<meta charset="utf-8" />
 		<style>
-			#live2dcanvas:hover {
-				opacity: ${hoverOpacity}!important;
-			}
-		</style>
+		#live2dcanvas:hover {
+			opacity: ${hoverOpacity}!important;
+		}
+	</style>
 	</head>
 	<body class="monaco-shell vs-dark" aria-label="">
-		<script>
-			(function() {
-				function getConfig() {
-					let queryParams = window.location.search.substring(1).split('&');
-					for (let i = 0; i < queryParams.length; i++) {
-						var kv = queryParams[i].split('=');
-						if (kv[0] === 'config' && kv[1]) {
-							return JSON.parse(decodeURIComponent(kv[1]));
-						}
-					}
-					return {};
-				}
-				try {
-					let config = getConfig();
-					let document = window.document;
-
-					// sets the base theme class ('vs', 'vs-dark', 'hc-black')
-					let baseTheme = config.baseTheme || 'vs';
-					document.body.className = 'monaco-shell ' + baseTheme;
-
-					// adds a stylesheet with the backgrdound color
-					let backgroundColor = config.backgroundColor;
-					if (!backgroundColor) {
-						backgroundColor = baseTheme === 'hc-black' ? '#000000' : (baseTheme === 'vs' ? '#FFFFFF' : '#1E1E1E');
-					}
-					let style = document.createElement('style');
-					style.innerHTML = '.monaco-shell { background-color:' + backgroundColor + '; }';
-					document.head.appendChild(style);
-
-				} catch (error) {
-					console.error(error);
-				}
-			})();
-		</script>
 	</body>
-	
-	<!-- Startup via index.js -->
-	<script src="index.js"></script>
+
+	<!-- Startup via workbench.js -->
+	<script src="workbench.js"></script>
 	<script src="http://summerscar.me/live2dDemo/bundle.js"></script>
 	<script>
 		let canvas = document.createElement('canvas')
