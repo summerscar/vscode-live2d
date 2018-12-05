@@ -77,7 +77,7 @@
                 "live2d.canHover": {
                     "type": "boolean",
                     "default": true,
-                    "description": "是否开启hover效果"
+                    "description": "可拖动(hover效果)"
                 }
             }
         }

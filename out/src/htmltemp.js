@@ -40,12 +40,42 @@ const render = function (config) {
 		canvas.style.bottom = '${bottom}px'
 		canvas.style.right = '${right}px'
 		canvas.style.opacity = ${opacity}
-		canvas.style.transition = 'all 0.5s'
+		canvas.style.transition = 'opacity 0.5s'
 		canvas.style.zIndex = '999'
+		canvas.style.cursor = 'move'
 		if (!${canHover}) {
 			canvas.style.pointerEvents = 'none'
 		}
 		document.body.appendChild(canvas)
+		var moveElem = canvas
+
+		var dragging;
+		var tLeft, tTop;
+
+		document.addEventListener('mousedown', function(e) {
+			if (e.target == moveElem) {
+
+				dragging = true;
+			var moveElemRect = moveElem.getBoundingClientRect();
+				tLeft = e.clientX - moveElemRect.left;
+				tTop = e.clientY - moveElemRect.top;
+			}
+		});
+
+		document.addEventListener('mouseup', function(e) {
+			dragging = false;
+		});
+
+		document.addEventListener('mousemove', function(e) {
+			if (dragging) {
+				var moveX = e.clientX - tLeft,
+					moveY = e.clientY - tTop;
+
+				moveElem.style.left = moveX + 'px';
+				moveElem.style.top = moveY + 'px';
+
+			}
+		});
 
 		loadlive2d('live2dcanvas', 'http://summerscar.me/live2dDemo/assets/${model}/${model}.model.json', ${headPos}, ${scale}, ${opacity}, ${hoverOpacity});
 	</script>
