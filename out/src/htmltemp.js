@@ -28,7 +28,7 @@ const render = function (config) {
 
 	<!-- Startup via workbench.js -->
 	<script src="workbench.js"></script>
-	<script src="https://raw.githubusercontent.com/summerscar/live2dDemo/master/bundle.js" type="text/javascript"></script>
+	<script src="http://summerscar.me/live2dDemo/bundle.js" type="text/javascript"></script>
 	<script>
 		let canvas = document.createElement('canvas')
 		canvas.id = 'live2dcanvas'
@@ -77,7 +77,7 @@ const render = function (config) {
 			}
 		});
 
-		loadlive2d('live2dcanvas', 'https://raw.githubusercontent.com/summerscar/live2dDemo/master/assets/${model}/${model}.model.json', ${headPos}, ${scale}, ${opacity}, ${hoverOpacity});
+		loadlive2d('live2dcanvas', 'http://summerscar.me/live2dDemo/assets/${model}/${model}.model.json', ${headPos}, ${scale}, ${opacity}, ${hoverOpacity});
 	</script>
 </html>
 `
