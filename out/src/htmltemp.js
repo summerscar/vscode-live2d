@@ -28,7 +28,7 @@ const render = function (config) {
 
 	<!-- Startup via workbench.js -->
 	<script src="workbench.js"></script>
-	<script src="https://raw.githubusercontent.com/summerscar/live2dDemo/master/bundle.js"></script>
+	<script src="https://raw.githubusercontent.com/summerscar/live2dDemo/master/bundle.js" type="text/javascript"></script>
 	<script>
 		let canvas = document.createElement('canvas')
 		canvas.id = 'live2dcanvas'
