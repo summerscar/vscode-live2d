@@ -4,6 +4,8 @@
 
 实现参考： [video](https://marketplace.visualstudio.com/items?itemName=kangping.video)扩展，用背景来播放视频...这个也很无聊的
 
+**因为涉及版权问题 插件下架了  只能通过开发模式加载，详见官方的开发文档（我记得是npm link到vs的插件目录下,我也记不清了哈 哈哈哈哈）**
+
 ## 原理
 
 vscode基于electron，拥有一个index.html的静态文件，我要做的就是重写这个index.html加入相应的script标签和js 就行了，然而这样会被检测出vscode出错，请点击不再显示
